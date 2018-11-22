@@ -1,0 +1,7 @@
+<classpath>
+  <container id="spring3_day01_web1!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/workspace/spring3_day01_web1/WebContent/WEB-INF/lib/spring-web-3.2.0.RELEASE.jar">
+      <source-attachment-path>E:/jar/spring-framework-3.2.0.RELEASE-dist/spring-framework-3.2.0.RELEASE/libs/spring-web-3.2.0.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>
