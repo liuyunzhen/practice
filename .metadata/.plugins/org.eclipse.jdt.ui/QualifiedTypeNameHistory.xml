@@ -5,10 +5,8 @@
 <fullyQualifiedTypeName name="org.springframework.web.context.support.WebApplicationContextUtils"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.taotao.manage.pojo.BasePojo"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.joda.time.DateTime"/>
 <fullyQualifiedTypeName name="com.taotao.manage.mapper.ItemMapper"/>
-<fullyQualifiedTypeName name="com.github.abel533.entity.Example"/>
 <fullyQualifiedTypeName name="com.github.pagehelper.PageHelper"/>
 <fullyQualifiedTypeName name="com.github.pagehelper.PageInfo"/>
 <fullyQualifiedTypeName name="com.taotao.common.bean.EasyUIResult"/>
@@ -28,8 +26,11 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="com.taotao.manage.service.ItemParamItemService"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="com.taotao.manage.pojo.ItemParamItem"/>
 <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
 <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+<fullyQualifiedTypeName name="com.taotao.manage.mapper.ItemParamItemMapper"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.github.abel533.entity.Example"/>
+<fullyQualifiedTypeName name="com.taotao.manage.pojo.ItemParamItem"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

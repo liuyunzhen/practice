@@ -4,6 +4,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.taotao.web"/>
 			<item value="com.taotao.manage"/>
 			<item value="com.taotao.common"/>
 			<item value="com.taotao.parent"/>
@@ -11,6 +12,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="taotao-web"/>
 			<item value="taotao-manage-web"/>
 			<item value="taotao-manage"/>
 			<item value="taotao-manage-service"/>
@@ -78,13 +80,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.taotao.manage.web"/>
 		</list>
 		<list key="groupId">
-			<item value="com.taotao.manage"/>
 		</list>
 		<list key="artifactId">
-			<item value="taotao-manage-web"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -94,7 +93,7 @@
 			<item value="[groupId].[artifactId]-[version]"/>
 		</list>
 		<list key="version">
-			<item value="1.0.0-SNAPSHOT"/>
+			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
 </section>
