@@ -1,0 +1,14 @@
+package com.taotao.manage.service;
+
+import org.springframework.stereotype.Service;
+
+import com.taotao.manage.pojo.Content;
+
+@Service
+public class ContentService extends BaseService<Content> {
+
+	public void queryPageListByCategoryId(Long categoryId, Long page, Long rows) {
+		
+	}
+
+}

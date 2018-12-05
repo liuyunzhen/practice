@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="itemParams" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="HandlerMethodArgumentResolver"/>
+			<item value="writeInternal"/>
+			<item value="web"/>
+			<item value="category"/>
+			<item value="itcast-usermanage"/>
+			<item value="spring"/>
 			<item value="item/param/item"/>
 			<item value="params"/>
-			<item value="picFileUpload"/>
-			<item value="submitForm"/>
-			<item value="itemEditWindow"/>
-			<item value="initItemCat"/>
-			<item value="data"/>
-			<item value="joda"/>
 		</list>
 		<list key="replacehistory">
+			<item value="taotao-web"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;taotao-common&apos;&#x0D;&#x0A;- Original project: &apos;taotao-common&apos;&#x0D;&#x0A;- Original element: &apos;taotao-common/src/main/java/com.taotao.util.spring.exetend.converter.json&apos;" description="Delete element" element1="/src\/main\/java&lt;com.taotao.util.spring.exetend.converter.json" element2="/src\/main\/java&lt;com.taotao.util.spring.exetend.converter" element3="/src\/main\/java&lt;com.taotao.util.spring.exetend" element4="/src\/main\/java&lt;com.taotao.util.spring" element5="/src\/main\/java&lt;com.taotao.util" elements="5" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1543477125372" subPackages="false" version="1.0"/>
+</session>

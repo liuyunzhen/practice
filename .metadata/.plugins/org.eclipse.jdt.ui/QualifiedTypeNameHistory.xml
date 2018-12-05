@@ -19,7 +19,6 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="java.lang.Void"/>
 <fullyQualifiedTypeName name="com.taotao.manage.service.ItemParamService"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="com.taotao.manage.pojo.ItemParam"/>
 <fullyQualifiedTypeName name="com.taotao.manage.mapper.ItemParamMapper"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -33,4 +32,9 @@
 <fullyQualifiedTypeName name="com.github.abel533.entity.Example"/>
 <fullyQualifiedTypeName name="com.taotao.manage.pojo.ItemParamItem"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
 </qualifiedTypeNameHistroy>
