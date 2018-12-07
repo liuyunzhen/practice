@@ -50,7 +50,7 @@ public class ItemService extends BaseService<Item>  {
 		return new EasyUIResult(pageInfo.getTotal(), pageInfo.getList());
 	}
 
-	public Boolean updateItem(Item item, String desc) {
+	public Boolean updateItem(Item item, String desc, String itemParams) {
 		item.setCreated(null);
 		item.setStatus(null);
 		Integer count1 = super.updateSelective(item);
@@ -58,7 +58,9 @@ public class ItemService extends BaseService<Item>  {
 		itemDesc.setItemId(item.getId());
 		itemDesc.setItemDesc(desc);
 		Integer count2 = itemDescService.updateSelective(itemDesc);
-		return count1 == 1 && count2 == 1;
+		
+		Integer count3 = itemParamItemService.updateByItemId(item.getId(), itemParams);
+		return count1 == 1 && count2 == 1 && count3 == 1;
 	}
 
 }

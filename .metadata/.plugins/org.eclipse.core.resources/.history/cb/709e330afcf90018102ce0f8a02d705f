@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.loan.message.dao.MessageUserChannelMapper">
+
+    <resultMap id="messageResultMap" type="com.loan.message.dto.MessageChannelSearchShowDTO">
+
+        <result column="id" property="id" jdbcType="BIGINT" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="category" property="category" jdbcType="VARCHAR" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
+        <result column="isRead" property="isRead" jdbcType="INTEGER" />
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
+
+    </resultMap>
+
+    <sql id="whereCondition">
+        <trim prefix="where" prefixOverrides="AND | OR ">
+            <if test="msgChannelId != null">
+                AND mtc.message_channel_id = #{msgChannelId, jdbcType=BIGINT}
+            </if>
+            <if test="userId != null">
+                AND mu.user_id = #{userId, jdbcType=BIGINT}
+            </if>
+            <if test="isRead != null">
+                AND muc.is_read = #{isRead, jdbcType=INTEGER}
+            </if>
+            <if test="msgUserChannelId != null">
+                AND muc.id = #{msgUserChannelId, jdbcType=BIGINT}
+            </if>
+            AND mtc.is_deleted = 0
+        </trim>
+    </sql>
+
+    <select id="selectByCondition" resultMap="messageResultMap" parameterType="com.loan.message.dto.MessageChannelSearchCondition">
+
+        select
+        muc.id id,
+        mt.title title,
+        mc.`name` category,
+        mu.msg_content content,
+        muc.is_read isRead,
+        muc.create_time createTime
+
+        from pl_message_user_channel muc
+
+        LEFT JOIN pl_message_tpl_channel mtc ON muc.msg_tpl_channel_id = mtc.id
+        LEFT JOIN pl_message_user mu ON mu.id = muc.msg_user_id
+        LEFT JOIN pl_message_tpl mt ON mu.msg_tpl_id =  mt.id
+        LEFT JOIN pl_message_category mc ON mc.id = mt.msg_category_id
+
+        <include refid="whereCondition"/> and muc.is_deleted = 0 and mu.is_deleted = 0 and muc.status=2
+
+        ORDER BY
+        muc.create_time DESC
+
+    </select>
+
+    <update id="signMsgUserChannelRead">
+
+        update pl_message_user_channel muc
+        LEFT JOIN pl_message_tpl_channel mtc ON muc.msg_tpl_channel_id = mtc.id
+        LEFT JOIN pl_message_user mu ON mu.id = muc.msg_user_id
+        set muc.is_read = 1,muc.read_time = now()
+        where mtc.message_channel_id = #{msgChannelId, jdbcType=BIGINT}
+        and mu.user_id = #{userId, jdbcType=BIGINT}
+        and muc.is_read = 0
+        and muc.`status` = 2
+
+
+    </update>
+</mapper>

@@ -1,2 +1,3 @@
-D:\workspace\taotao-common\src\main\java\com\taotao\common\bean\EasyUIResult.java
-D:\workspace\taotao-common\src\main\java\com\taotao\common\bean\PicUploadResult.java
+D:\workspace\practice\taotao-common\src\main\java\com\taotao\common\bean\PicUploadResult.java
+D:\workspace\practice\taotao-common\src\main\java\com\taotao\common\bean\EasyUIResult.java
+D:\workspace\practice\taotao-common\src\main\java\com\taotao\common\spring\exetend\converter\json\CallbackMappingJackson2HttpMessageConverter.java

@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="formatPrice" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="formatPrice"/>
 			<item value="HandlerMethodArgumentResolver"/>
 			<item value="writeInternal"/>
 			<item value="web"/>
@@ -15,7 +16,6 @@
 			<item value="itcast-usermanage"/>
 			<item value="spring"/>
 			<item value="item/param/item"/>
-			<item value="params"/>
 		</list>
 		<list key="replacehistory">
 			<item value="taotao-web"/>

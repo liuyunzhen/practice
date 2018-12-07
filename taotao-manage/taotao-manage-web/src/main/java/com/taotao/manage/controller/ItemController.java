@@ -55,9 +55,9 @@ public class ItemController {
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT)
-	public ResponseEntity<Void> updateItem(Item item, @RequestParam("desc")String desc){
+	public ResponseEntity<Void> updateItem(Item item, @RequestParam("desc")String desc, @RequestParam("itemParams")String itemParams){
 		try {
-			Boolean flag = itemService.updateItem(item, desc);
+			Boolean flag = itemService.updateItem(item, desc, itemParams);
 			if (flag) {
 				return ResponseEntity.status(HttpStatus.OK).build();
 			}
