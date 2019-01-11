@@ -45,6 +45,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\workspace\practice\itcast-redis"/>
 			<item value="D:\workspace\practice\taotao-manage"/>
 			<item value="D:\workspace\practice\taotao-common"/>
 			<item value="D:\workspace\practice\itcast-httpclient"/>

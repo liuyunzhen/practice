@@ -1,0 +1,6 @@
+REPOSITORY_PATH=D:\\go
+IMAGE_BASE_URL=http://image.taotao.com
+
+
+REDIS_IP1=127.0.0.1
+REDIS_PORT1=6379

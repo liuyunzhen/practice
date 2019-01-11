@@ -380,6 +380,7 @@ $("#loginsubmit").click(function () {
                 $this.removeAttr("disabled");
             },
             success: function (result) {
+            	console.log("===================", result);
                 if (result) {
                     var obj = eval(result);
                     if (obj.status == 200) {

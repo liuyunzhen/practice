@@ -1,0 +1,13 @@
+package com.taotao.manage.interceptor;
+@ControllerAdvice(basePackages = {"com.eweiche"})
+public class JSONPController extends AbstractJsonpResponseBodyAdvice{
+
+    public JSONPController(){
+        super("callback","jsonp");
+    }
+}
+--------------------- 
+作者：30分 
+来源：CSDN 
+原文：https://blog.csdn.net/u013218587/article/details/54657595 
+版权声明：本文为博主原创文章，转载请附上博文链接！

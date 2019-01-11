@@ -1,0 +1,13 @@
+package com.taotao.common.httpclient;
+
+import java.util.Map;
+
+public class ResultObject {
+	
+	private Integer status;
+	
+	private String message;
+	
+	private Map<String, Object> data;
+	
+}

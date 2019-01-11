@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.taotao.manage.pojo.ItemCat;
+import com.taotao.common.bean.ItemCatResult;
 import com.taotao.manage.service.ItemCatService;
 
 @Controller
@@ -19,10 +19,10 @@ public class ApiItemCatController {
 	private ItemCatService itemCatService;
 
 	@RequestMapping(method=RequestMethod.GET)
-	public ResponseEntity<List<ItemCat>> queryAllItemCatList(){
+	public ResponseEntity<ItemCatResult> queryAllItemCatList(){
 		try {
-			List<ItemCat> itemCatList = itemCatService.queryAll();
-			return ResponseEntity.ok(itemCatList);
+			ItemCatResult result = itemCatService.queryAllItemCatList();
+			return ResponseEntity.ok(result);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

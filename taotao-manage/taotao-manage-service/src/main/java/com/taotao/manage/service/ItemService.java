@@ -1,14 +1,19 @@
 package com.taotao.manage.service;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.apache.http.client.ClientProtocolException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.github.abel533.entity.Example;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taotao.common.bean.EasyUIResult;
+import com.taotao.common.httpclient.ResultObjectStrData;
+import com.taotao.common.service.APIService;
 import com.taotao.manage.mapper.ItemMapper;
 import com.taotao.manage.pojo.Item;
 import com.taotao.manage.pojo.ItemDesc;
@@ -22,6 +27,10 @@ public class ItemService extends BaseService<Item>  {
 	private ItemMapper itemMapper;
 	@Autowired
 	private ItemParamItemService itemParamItemService;
+	@Autowired
+	private APIService apiService;
+	@Value("${TAOTAO_WEB_URL}")
+	private String TAOTAO_WEB_URL;
 	
 	public Boolean saveItem(Item item, String desc, String itemParams){
 		item.setStatus(1);
@@ -54,12 +63,21 @@ public class ItemService extends BaseService<Item>  {
 		item.setCreated(null);
 		item.setStatus(null);
 		Integer count1 = super.updateSelective(item);
+		
 		ItemDesc itemDesc = new ItemDesc();
 		itemDesc.setItemId(item.getId());
 		itemDesc.setItemDesc(desc);
 		Integer count2 = itemDescService.updateSelective(itemDesc);
 		
 		Integer count3 = itemParamItemService.updateByItemId(item.getId(), itemParams);
+		
+		try {
+			String url = TAOTAO_WEB_URL + "item/cache/" + item.getId() + ".html";
+			ResultObjectStrData resultObject = apiService.doPost(url);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		return count1 == 1 && count2 == 1 && count3 == 1;
 	}
 

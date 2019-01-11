@@ -1,0 +1,13 @@
+127.0.0.1 - - [10/Jan/2019:16:30:42 +0800] "GET /user/login.html HTTP/1.0" 200 12621 http-bio-8083-exec-1 865
+127.0.0.1 - - [10/Jan/2019:16:30:42 +0800] "GET /favicon.ico HTTP/1.0" 404 973 http-bio-8083-exec-2 18
+127.0.0.1 - - [10/Jan/2019:16:31:24 +0800] "POST /service/user/doLogin?r=0.3754084203910335 HTTP/1.0" 200 53 http-bio-8083-exec-3 26051
+127.0.0.1 - - [10/Jan/2019:16:31:46 +0800] "GET /user/login.html HTTP/1.0" 200 12621 http-bio-8083-exec-4 19
+127.0.0.1 - - [10/Jan/2019:16:31:57 +0800] "POST /service/user/doLogin?r=0.2706622740816049 HTTP/1.0" 200 53 http-bio-8083-exec-5 71
+127.0.0.1 - - [10/Jan/2019:16:33:27 +0800] "GET /user/login.html HTTP/1.0" 200 12621 http-bio-8083-exec-6 39
+127.0.0.1 - - [10/Jan/2019:16:33:42 +0800] "POST /service/user/doLogin?r=0.553671232294445 HTTP/1.0" 200 53 http-bio-8083-exec-7 47
+127.0.0.1 - - [10/Jan/2019:16:39:41 +0800] "GET /user/login.html HTTP/1.0" 200 12621 http-bio-8083-exec-8 418
+127.0.0.1 - - [10/Jan/2019:16:39:49 +0800] "POST /service/user/doLogin?r=0.40248400582252697 HTTP/1.0" 200 53 http-bio-8083-exec-9 536
+127.0.0.1 - - [10/Jan/2019:16:59:14 +0800] "GET /user/login.html HTTP/1.0" 200 12621 http-bio-8083-exec-10 193
+127.0.0.1 - - [10/Jan/2019:16:59:27 +0800] "POST /service/user/doLogin?r=0.9579124937794359 HTTP/1.0" 200 53 http-bio-8083-exec-1 137
+127.0.0.1 - - [10/Jan/2019:17:00:09 +0800] "GET /user/login.html HTTP/1.0" 200 12621 http-bio-8083-exec-2 12
+127.0.0.1 - - [10/Jan/2019:17:00:19 +0800] "POST /service/user/doLogin?r=0.630645885156734 HTTP/1.0" 200 53 http-bio-8083-exec-3 48

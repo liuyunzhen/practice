@@ -7,7 +7,7 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-	<aop:aspectj-autoproxy/>
+	<!-- <aop:aspectj-autoproxy proxy-target-class="true"/> -->
     <!-- <bean id="timerLogInterceptor" class="com.taotao.manage.interceptor.TimerLogInterceptor">
     </bean> -->
 	<!-- 使用spring自带的占位符替换功能 -->
@@ -22,6 +22,7 @@
 			<list>
 				<value>classpath:jdbc.properties</value>
 				<value>classpath:env.propertise</value>
+				<value>classpath:client.propertise</value>
 			</list>
 		</property>
 	</bean>

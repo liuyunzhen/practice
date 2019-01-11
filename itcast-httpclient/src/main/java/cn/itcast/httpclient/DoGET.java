@@ -14,7 +14,7 @@ public class DoGET {
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
         // 鍒涘缓http GET璇锋眰
-        HttpGet httpGet = new HttpGet("http://manage.taotao.com/rest/content?categoryId=38&page=1&rows=20");
+        HttpGet httpGet = new HttpGet("http://manage.taotao.com/rest/content?categoryId=38&page=1&rows=6");
 
         CloseableHttpResponse response = null;
         try {

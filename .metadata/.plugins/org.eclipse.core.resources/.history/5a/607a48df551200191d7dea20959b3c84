@@ -1,0 +1,65 @@
+package com.taotao.sso.service;
+
+import java.util.Date;
+
+import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.taotao.common.service.RedisService;
+import com.taotao.sso.mapper.UserMapper;
+import com.taotao.sso.pojo.User;
+
+@Service
+public class UserService {
+	
+	private static final ObjectMapper objectMapper = new ObjectMapper();
+
+	@Autowired
+	private UserMapper userMapper;
+	
+	@Autowired
+	private RedisService redisService;
+
+	public Boolean check(String param, Integer type) {
+		User user = new User();
+		switch (type) {
+		case 1:
+			user.setUsername(param);
+			break;
+		case 2:
+			user.setPhone(param);
+			break;
+		case 3:
+			user.setEmail(param);
+			break;
+		default:
+			return null;
+		}
+		return userMapper.selectOne(user) == null;
+	}
+
+	public Boolean insert(User user) {
+		user.setId(null);
+		user.setCreated(new Date());
+		user.setUpdated(new Date());
+		
+		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		return userMapper.insert(user) == 1;
+	}
+
+	public String login(String username, String password) {
+		User record = new User();
+		User user = userMapper.selectOne(record);
+		if (null == user) {
+			return null;
+		}
+		if (!DigestUtils.md5Hex(password).equals(user.getPassword())) {
+			return null;
+		}
+		String token = DigestUtils.md5Hex(System.currentTimeMillis() + username);
+		redisService.set("TOKEN_" + token, objectMapper.writeValueAsString(user), 60 * 30)
+		return null;
+	}
+}

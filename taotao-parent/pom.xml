@@ -7,12 +7,6 @@
   
    <repositories>
         <repository>
-            <id>nexus</id>
-            <name>dev Repository</name>
-            <url>http://repo.zhengshijr.com/nexus/content/groups/public</url>
-        </repository>
-
-        <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
             <url>https://oss.sonatype.org/content/repositories</url>

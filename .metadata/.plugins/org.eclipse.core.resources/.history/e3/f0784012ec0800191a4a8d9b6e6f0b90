@@ -1,0 +1,5 @@
+package com.taotao.web.vo;
+
+public class ItemVo {
+
+}

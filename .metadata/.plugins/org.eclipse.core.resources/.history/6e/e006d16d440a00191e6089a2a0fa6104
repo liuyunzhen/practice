@@ -1,0 +1,63 @@
+package com.taotao.web.service;
+
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.taotao.manage.pojo.ItemDesc;
+import com.taotao.manage.pojo.ItemParamItem;
+import com.taotao.web.vo.ItemVo;
+
+@Service
+public class ItemService {
+	private static final ObjectMapper ObjectMapper = new ObjectMapper();
+	@Autowired
+	private APIService apiService;
+	
+	@Value("${TAOTAO_MANAGE_URL}")
+	private String TAOTAO_MANAGE_URL;
+
+	public ItemVo queryItemByItemId(Long itemId) {
+		String url = TAOTAO_MANAGE_URL + "/item/" + itemId; 
+		try {
+			String result = apiService.doGet(url);
+			return ObjectMapper.readValue(result, ItemVo.class);
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public ItemDesc queryItemDescByItemId(Long itemId) {
+		String url = TAOTAO_MANAGE_URL + "/item/desc/" + itemId; 
+		try {
+			String result = apiService.doGet(url);
+			return ObjectMapper.readValue(result, ItemDesc.class);
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public ItemParamItem queryItemParamItemByItemId(Long itemId) {
+		String url = TAOTAO_MANAGE_URL + "/item/param/item/" + itemId; 
+		try {
+			String result = apiService.doGet(url);
+			return ObjectMapper.readValue(result, ItemParamItem.class);
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

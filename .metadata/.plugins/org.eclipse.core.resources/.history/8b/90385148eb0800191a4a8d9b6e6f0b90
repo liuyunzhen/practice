@@ -1,0 +1,18 @@
+package com.taotao.web.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.taotao.manage.pojo.Item;
+
+@Service
+public class ItemService {
+	@Autowired
+	private APIService apiService;
+
+	public Item queryItemByItemId(Long itemId) {
+		apiService.doGet(url);
+		return null;
+	}
+
+}

@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="com.taotao.manage.mapper.ItemMapper"/>
 <fullyQualifiedTypeName name="com.github.pagehelper.PageHelper"/>
 <fullyQualifiedTypeName name="com.github.pagehelper.PageInfo"/>
-<fullyQualifiedTypeName name="com.taotao.common.bean.EasyUIResult"/>
 <fullyQualifiedTypeName name="com.taotao.manage.service.ItemDescService"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="com.taotao.manage.pojo.ItemDesc"/>
@@ -23,7 +22,6 @@
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
-<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
 <fullyQualifiedTypeName name="com.taotao.manage.pojo.ItemParamItem"/>
 <fullyQualifiedTypeName name="com.github.abel533.entity.Example"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
@@ -41,4 +39,9 @@
 <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="com.taotao.common.bean.EasyUIResult"/>
+<fullyQualifiedTypeName name="com.taotao.manage.pojo.Content"/>
+<fullyQualifiedTypeName name="com.taotao.web.vo.ItemVo"/>
 </qualifiedTypeNameHistroy>

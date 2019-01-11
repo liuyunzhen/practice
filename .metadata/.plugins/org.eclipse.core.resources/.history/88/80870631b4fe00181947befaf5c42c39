@@ -1,0 +1,79 @@
+package com.taotao.web.service;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Map;
+
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.taotao.web.httpclient.ResultObject;
+
+@Service
+public class APIService {
+	@Autowired
+	private CloseableHttpClient httpclient;
+	@Autowired
+	private RequestConfig config;
+
+	public String doGet(String url) throws ClientProtocolException, IOException{
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+
+        // 鍒涘缓http GET璇锋眰
+        HttpGet httpGet = new HttpGet(url);
+
+        CloseableHttpResponse response = null;
+        try {
+            // 鎵ц璇锋眰
+            response = httpclient.execute(httpGet);
+            // 鍒ゆ柇杩斿洖鐘舵�佹槸鍚︿负200
+            if (response.getStatusLine().getStatusCode() == 200) {
+                return EntityUtils.toString(response.getEntity(), "UTF-8");
+            }
+        } finally {
+            if (response != null) {
+                response.close();
+            }
+        }
+        return null;
+	}
+	
+	public String doGet(String url, Map<String, String> params) throws ClientProtocolException, IOException, URISyntaxException{
+		// 定义请求的参数
+        URIBuilder builder = new URIBuilder(url);
+        for (Map.Entry<String, String> entry : params.entrySet()) {
+        	builder.setParameter(entry.getKey(), entry.getValue());
+		}
+		return doGet(builder.build().toString());
+	}
+	
+	public ResultObject doPost(String url, Map<String, String> params) throws ClientProtocolException, IOException{
+        // 创建http POST请求
+        HttpPost httpPost = new HttpPost(url);
+
+        CloseableHttpResponse response = null;
+        try {
+            // 执行请求
+            response = httpclient.execute(httpPost);
+            // 判断返回状态是否为200
+            if (response.getStatusLine().getStatusCode() == 200) {
+                String content = EntityUtils.toString(response.getEntity(), "UTF-8");
+                System.out.println(content);
+            }
+        } finally {
+            if (response != null) {
+                response.close();
+            }
+        }
+	}
+}

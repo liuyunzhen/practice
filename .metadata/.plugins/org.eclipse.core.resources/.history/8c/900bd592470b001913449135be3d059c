@@ -1,0 +1,10 @@
+REPOSITORY_PATH=D:\\go
+IMAGE_BASE_URL=http://image.taotao.com
+
+redis.maxTotal=50
+
+redis.node1.ip=127.0.0.1
+redis.node1.port=6379
+
+redis.node2.ip=127.0.0.1
+redis.node2.port=6380

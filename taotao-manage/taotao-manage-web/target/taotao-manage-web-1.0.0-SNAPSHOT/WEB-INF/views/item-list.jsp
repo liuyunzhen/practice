@@ -51,12 +51,17 @@
         		$.messager.alert('提示','只能选择一个商品!');
         		return ;
         	}
-        	
+			
         	$("#itemEditWindow").window({
         		onLoad :function(){
         			//回显数据
         			var data = $("#itemList").datagrid("getSelections")[0];
         			data.priceView = TAOTAO.formatPrice(data.price);
+        			// 加载商品类目名称
+        			$.ajaxSettings.async = false; 
+        			$.getJSON('/rest/item/cat/queryOne/'+data.cid,function(_data){
+        				data.name = _data.name;
+        			});
         			$("#itemeEditForm").form("load",data);
         			
         			// 加载商品描述
@@ -66,13 +71,13 @@
         			
         			//加载商品规格
         			$.getJSON('/rest/item/param/item/query/'+data.id,function(_data){
-        				if(_data && _data.status == 200 && _data.data && _data.data.paramData){
+        				if(_data.paramData){
         					$("#itemeEditForm .params").show();
-        					$("#itemeEditForm [name=itemParams]").val(_data.data.paramData);
-        					$("#itemeEditForm [name=itemParamId]").val(_data.data.id);
+        					$("#itemeEditForm [name=itemParams]").val(_data.paramData);
+        					$("#itemeEditForm [name=itemParamId]").val(_data.id);
         					
         					//回显商品规格
-        					 var paramData = JSON.parse(_data.data.paramData);
+        					 var paramData = JSON.parse(_data.paramData);
         					
         					 var html = "<ul>";
         					 for(var i in paramData){
@@ -95,6 +100,7 @@
         			TAOTAO.init({
         				"pics" : data.image,
         				"cid" : data.cid,
+        				"name" : data.name,
         				fun:function(node){
         					TAOTAO.changeItemParam(node, "itemeEditForm");
         				}

@@ -1,0 +1,43 @@
+package com.taotao.manage.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import redis.clients.jedis.ShardedJedis;
+import redis.clients.jedis.ShardedJedisPool;
+
+@Service
+public class RedisService {
+	@Autowired
+	private ShardedJedisPool shardedJedisPool;
+	
+	private <T> T excute(Function<T, ShardedJedis> fun){
+		try {
+			ShardedJedis shardedJedis = shardedJedisPool.getResource();
+			return fun.callback(shardedJedis);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public String set(String key, String value){
+		return this.excute(new Function<T, ShardedJedis>() {
+			@Override
+			public com.taotao.manage.service.T callback(ShardedJedis e) {
+				return null;
+			}
+		});
+	}
+	
+	public String get(String key){
+		try {
+			ShardedJedis shardedJedis = shardedJedisPool.getResource();
+			return shardedJedis.get(key);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

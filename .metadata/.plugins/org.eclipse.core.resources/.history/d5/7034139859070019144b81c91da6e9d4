@@ -1,0 +1,11 @@
+package com.taotao.manage.advice;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice(basePackages = {"com.eweiche"})
+public class JSONPController extends AbstractJsonpResponseBodyAdvice{
+
+    public JSONPController(){
+        super("callback","jsonp");
+    }
+}

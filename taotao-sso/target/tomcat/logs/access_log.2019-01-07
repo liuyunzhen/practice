@@ -1,0 +1,14 @@
+127.0.0.1 - - [07/Jan/2019:16:36:10 +0800] "GET /user/login HTTP/1.0" 404 971 http-bio-8083-exec-1 229
+127.0.0.1 - - [07/Jan/2019:16:36:11 +0800] "GET /favicon.ico HTTP/1.0" 404 973 http-bio-8083-exec-2 8
+127.0.0.1 - - [07/Jan/2019:16:36:11 +0800] "GET /favicon.ico HTTP/1.0" 404 973 http-bio-8083-exec-3 6
+127.0.0.1 - - [07/Jan/2019:16:36:31 +0800] "GET /service/user/check/zhangsan9/1?r=0.7338896113602926 HTTP/1.0" 200 5 http-bio-8083-exec-4 2480
+127.0.0.1 - - [07/Jan/2019:16:36:46 +0800] "GET /service/user/check/15912345678/2?r=0.0568156544428815 HTTP/1.0" 200 5 http-bio-8083-exec-5 38
+127.0.0.1 - - [07/Jan/2019:16:36:49 +0800] "POST /service/user/doRegister HTTP/1.0" 200 53 http-bio-8083-exec-6 589
+127.0.0.1 - - [07/Jan/2019:16:37:04 +0800] "POST /service/user/doRegister HTTP/1.0" 500 14449 http-bio-8083-exec-7 359
+127.0.0.1 - - [07/Jan/2019:16:37:18 +0800] "GET /user/login HTTP/1.0" 404 971 http-bio-8083-exec-8 3
+127.0.0.1 - - [07/Jan/2019:16:37:51 +0800] "POST /service/user/doLogin?r=0.42467891630098453 HTTP/1.0" 405 1047 http-bio-8083-exec-9 10
+127.0.0.1 - - [07/Jan/2019:16:39:08 +0800] "POST /service/user/doLogin?r=0.0396844765776152 HTTP/1.0" 200 53 http-bio-8083-exec-1 1488
+127.0.0.1 - - [07/Jan/2019:16:41:07 +0800] "POST /service/user/doLogin?r=0.12331086421816506 HTTP/1.0" 500 6640 http-bio-8083-exec-1 1845
+127.0.0.1 - - [07/Jan/2019:16:42:31 +0800] "POST /service/user/doLogin?r=0.23592628717718012 HTTP/1.0" 200 53 http-bio-8083-exec-1 1782
+127.0.0.1 - - [07/Jan/2019:16:43:10 +0800] "GET /user/login.html HTTP/1.0" 200 12621 http-bio-8083-exec-2 491
+127.0.0.1 - - [07/Jan/2019:16:43:51 +0800] "POST /service/user/doLogin?r=0.05553566929682874 HTTP/1.0" 200 53 http-bio-8083-exec-3 30165

@@ -15,8 +15,8 @@ D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\347289111.ind
 \coupon-server\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3773000772.index
 \damocles-crm-webapp\src\main\java
-D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2690567266.index
-\coupon-server\src\main\java
+D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1665650392.index
+\taotao-manage-web\src\main\java
 D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\302541286.index
 \taotao-web\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3684667452.index
@@ -31,6 +31,8 @@ D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1160103886.in
 \damocles-crm-webapp\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1572978964.index
 \coupon-server\src\main\java
+D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\993205472.index
+\taotao-sso\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2536300202.index
 \damocles-esb-webapp\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3960974338.index
@@ -145,10 +147,10 @@ D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2606158557.in
 \damocles-crm-webapp\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3255259917.index
 \damocles-crm-webapp\src\main\java
-D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2549045772.index
-\taotao-manage-web\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3177923618.index
 \coupon-server\src\main\java
+D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2549045772.index
+\taotao-manage-web\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3384462893.index
 \damocles-crm-webapp\src\main\java
 D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2416787184.index
@@ -163,6 +165,8 @@ D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2290593349.in
 \damocles-crm-webapp\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2815294830.index
 \coupon-server\src\main\java
+D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\377783289.index
+\taotao-sso\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3448397441.index
 \damocles-crm-webapp\src\main\java
 D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3436176051.index
@@ -187,5 +191,5 @@ D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1087409487.in
 \coupon-server\src\main\java
 D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\52224751.index
 \coupon-server\src\main\java
-D:\workspace\practice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1665650392.index
-\taotao-manage-web\src\main\java
+D:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2690567266.index
+\coupon-server\src\main\java

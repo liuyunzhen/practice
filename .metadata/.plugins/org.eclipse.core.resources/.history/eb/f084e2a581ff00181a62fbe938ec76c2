@@ -1,0 +1,42 @@
+package com.taotao.web.service;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Service
+public class IndexService {
+	private static final ObjectMapper objectMapper = new ObjectMapper();
+	@Autowired
+	private APIService apiService;
+
+	public String queryAd1() {
+		try {
+			String url = "http://manage.taotao.com/rest/content?categoryId=38&page=1&rows=6";
+			String data = apiService.doGet(url);
+			JsonNode jsonNode = objectMapper.readTree(data);
+			JsonNode rows = jsonNode.get("rows");
+			for (JsonNode row : rows) {
+				Map<String, Object> map = new LinkedHashMap<String, Object>();
+				map.put("srcB", map.get("pic"));
+				map.put("height", map.get("pic"));
+				map.put("alt", map.get("pic"));
+				map.put("width", map.get("pic"));
+				map.put("src", map.get("pic"));
+				map.put("widthB", map.get("pic"));
+				map.put("href", map.get("pic"));
+				map.put("heightB", map.get("pic"));
+			}
+			return rows.toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}
